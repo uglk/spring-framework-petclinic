@@ -16,3 +16,10 @@ spec:
     command:
     - cat 
     tty: true
+    volumeMounts:
+    - name: cache
+      mountPath: /root/.m2/repository/   
+  volumes:
+  - name: cache
+    persistentVolumeClaim:
+      claimName: spring-petclinic-pvc
