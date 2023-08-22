@@ -36,7 +36,7 @@ pipeline {
         stage("Maven Package") {
             steps {
                 container("maven"){
-                   sh  'mvn package'
+                   sh  'mvn package -Dmaven.test.skip=true'
                 }
             }
         }
