@@ -22,7 +22,7 @@ pipeline {
         stage("Maven Build") {
             steps {
                 container("maven"){
-                   sh  'mvn clean'
+                   sh  'mvn clean package'
                 }
             }
         }
