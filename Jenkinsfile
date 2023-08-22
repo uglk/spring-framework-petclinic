@@ -26,5 +26,12 @@ pipeline {
                 }
             }
         }
+        stage("Maven Compile") {
+            steps {
+                container("maven"){
+                   sh  'mvn compile'
+                }
+            }
+        }
     }
 }
