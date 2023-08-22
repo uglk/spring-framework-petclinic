@@ -29,7 +29,7 @@ pipeline {
         stage("Maven Compile") {
             steps {
                 container("maven"){
-                   sh  'mvn compile'
+                   sh  'mvn compile test'
                 }
             }
         }
