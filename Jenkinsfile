@@ -33,5 +33,12 @@ pipeline {
                 }
             }
         }
+        stage("Maven Package") {
+            steps {
+                container("maven"){
+                   sh  'mvn package'
+                }
+            }
+        }
     }
 }
