@@ -32,6 +32,11 @@ pipeline {
                    sh  'mvn compile test'
                 }
             }
+            post {
+               always {
+               junit 'build/reports/**/*.xml'
+              }
+            }
         }
         stage("Maven Package") {
             steps {
